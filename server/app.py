@@ -33,7 +33,7 @@ def bakeries():
         jsonify(all_bakeries),
         200
     )
-    response.headers['Content-Type'] = 'application/json'
+    # response.headers['Content-Type'] = 'application/json'
     return response 
 
 @app.route('/bakeries/<int:id>')
@@ -47,7 +47,7 @@ def bakery_by_id(id):
         jsonify(bakery_dict),
         200
     )
-    response.headers['Content-Type'] = 'application/json'
+    # response.headers['Content-Type'] = 'application/json'
     return response
 
 # GET /baked_goods/by_price: returns an array of baked goods as JSON, sorted by price in descending order. (HINT: how can you use SQLAlchemy to sort the baked goods in a particular order?)
@@ -62,7 +62,7 @@ def baked_goods_by_price():
         jsonify(all_baked_goods),
         200
     )
-    response.headers['Content-Type'] = 'application/json'
+    # response.headers['Content-Type'] = 'application/json'
     return response
 
 @app.route('/baked_goods/most_expensive')
@@ -74,7 +74,7 @@ def most_expensive_baked_good():
         jsonify(most_expensive_dict),
         200
     )
-    response.headers['Content-Type'] = 'application/json'
+    # response.headers['Content-Type'] = 'application/json'
     return response
 
 if __name__ == '__main__':
